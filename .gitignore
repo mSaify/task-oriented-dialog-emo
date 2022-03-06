@@ -1,0 +1,5 @@
+/datasets/
+*.h5
+/airline_data/
+/linux_data/
+/media_data/
