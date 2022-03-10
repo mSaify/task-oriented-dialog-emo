@@ -31,9 +31,9 @@ def create_datasets_from_csv(tokenizer, data_path, buffer_size, batch_size, max_
                 all_dialog_ids += dialog_ids
         return all_dialog_ids
 
-    train_ids = read_split_ids('../amt/train_ids.txt')
-    val_ids = read_split_ids('../amt/val_ids.txt')
-    test_ids = read_split_ids('../amt/test_ids.txt')
+    train_ids = read_split_ids('train_ids.txt')
+    val_ids = read_split_ids('val_ids.txt')
+    test_ids = read_split_ids('test_ids.txt')
 
     emot2id = {}
     with open('ebp_labels.txt', 'r') as f:
@@ -53,9 +53,12 @@ def create_datasets_from_csv(tokenizer, data_path, buffer_size, batch_size, max_
                 df_extra_f = df_extra[~df_extra['os_dialog_id'].isin(test_ids)]
                 dialogs += df_extra_f['os_dialog'].tolist()
                 labels += df_extra_f['emotion'].tolist()
-
+      #  try:
         labels = [emot2id[label.lower().replace(' (other)', '')] for label in labels]
         labels = np.array(labels, dtype = np.int32)
+
+        # except:
+        #     print('error')
 
         inputs = np.ones((len(dialogs), max_length), dtype = np.int32)
         weights = np.ones((len(dialogs), max_length), dtype = np.float32)
@@ -105,10 +108,10 @@ def create_test_dataset_from_csv(tokenizer, batch_size, max_length):
     EOS_ID = tokenizer.encode('</s>')[0]
 
     print('Reading the csv file...')
-    df = pd.read_csv('/Users/msaify/repos/IITHAssignments/capstone/final_problem/EDOS-main/Data/Training data for the dialogue emotion classifier/1. MTurk_groundtruth_labels_9K.csv')
+    df = pd.read_csv('original_data/MTurk_groundtruth_labels_9K.csv')
 
     test_ids = []
-    with open('../amt/test_ids.txt', 'r') as f:
+    with open('test_ids.txt', 'r') as f:
         for line in f:
             items = line.strip().split(',')
             dialog_ids = [int(i) for i in items[1:]]

@@ -11,7 +11,7 @@ trusting,9
 confident,10
 faithful,11
 impressed,12
-suprised,13
+surprised,13
 terrified,14
 afraid,15
 apprehensive,16
@@ -39,3 +39,5 @@ suggesting,37
 questioning,38
 wishing,39
 neutral,40
+disagreeing,41
+blah,42

@@ -35,3 +35,13 @@ Lison, P.; Tiedemann, J.; Kouylekov, M.; et al. 2019.  Opensubtitles 2018: Stati
 Hannah Rashkin, Eric Michael Smith, Margaret Li and Y-Lan Boureau. 2019.  Towards Empathetic Open-domain Conversation  Models:  A  New  Benchmark  and  Dataset.   In *Proceedings  of  the  57th  Annual  Meeting  of  the Association for Computational Linguistics*, pages 5370–5381, Florence, Italy.
 
 Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019. BERT: Pre-training of Deep Bidirectional Transformers forLanguage Understanding.  In *Proceedings of the 2019 Conference of the North American Chapter of the Association forComputational Linguistics: Human Language Technologies*, Volume 1 (Long and Short Papers), 4171–4186. Minneapolis, Minnesota: Association for Computational Linguistics.
+
+
+### to run
+dowload original_data from - https://drive.google.com/drive/folders/1F5x8DU8lnTfZN2_CvX1SuDs1O_AR0tpG?usp=sharing
+
+download weights - https://drive.google.com/drive/folders/16KnWwenEutgDj7lHAH4_JjjEYt0dLZjj?usp=sharing
+
+pip3 install requirements.txt
+
+python3 train_emobert.py
