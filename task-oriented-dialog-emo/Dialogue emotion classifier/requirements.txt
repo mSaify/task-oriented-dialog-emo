@@ -1,7 +1,0 @@
-numpy
-tensorflow-gpu==2.8.0
-tensorflow
-pytorch_transformers
-sklearn
-tqdm
-pandas
