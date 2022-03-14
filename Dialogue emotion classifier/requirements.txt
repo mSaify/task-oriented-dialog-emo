@@ -1,7 +1,9 @@
-numpy
-tensorflow-gpu==2.8.0
-tensorflow
-pytorch_transformers
+numpy==1.18.2
+tensorflow-gpu==2.1.0
+tensorflow==2.2.0rc2
+pytorch_transformers==1.2.0
 sklearn
 tqdm
 pandas
+h5py==2.10.0
+pyyaml==3.13
